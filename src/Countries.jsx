@@ -17,8 +17,16 @@ function Countries() {
 
     useEffect(() => {
         fetch(API_URL)
-            .then((response) => response.json())
-            .then((data) => setCountries(data));
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Failed to fetch countries");
+            }
+            return response.json();
+        })
+        .then((data) => setCountries(data))
+        .catch((error) => {
+            console.error("API Error:", error.message);
+        });
     }, []);
 
     console.log({ countries });
