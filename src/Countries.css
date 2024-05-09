@@ -1,0 +1,26 @@
+.countries {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 8px;
+    flex-direction: column;
+    width: 200px;
+}
+
+.flag-image {
+    width: 100px;
+    height: 100px;
+}
